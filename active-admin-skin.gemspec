@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{skin for active admin.}
   spec.description   = %q{skin for active admin.}
-  spec.homepage      = "https://github.com/rstgroup/active_skin"
+  spec.homepage      = "https://github.com/ayann/active-admin-skin"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
