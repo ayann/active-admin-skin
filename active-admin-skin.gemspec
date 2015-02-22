@@ -9,10 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Armand Niampa"]
   spec.email         = ["armand.niampa@gmail.com"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
   spec.summary       = %q{skin for active admin.}
   spec.description   = %q{skin for active admin.}
   spec.homepage      = "https://github.com/rstgroup/active_skin"
