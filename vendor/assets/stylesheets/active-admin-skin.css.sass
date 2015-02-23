@@ -6,6 +6,8 @@ $skinTextTable: #7f8c8d !default
 $skinActiveColor: #eda600 !default
 $skinHeaderBck: #1e2a33 !default
 $panelHeaderBck: #2c3e50 !default
+// $panelBorder: #d2d6de !default
+$panelBorder: #babdc5 !default
 
 html
   background: #ecf0f1
@@ -110,16 +112,23 @@ html
         padding-bottom: 4px !important
 
   .panel
+    // background: #fff
+    // border: 1px solid #d3d8dc
+    // position: relative
+    // box-shadow: none
+    // border-radius: 0
     background: #fff
-    border: 1px solid #d3d8dc
     position: relative
-    box-shadow: none
-    border-radius: 0
+    border-top: 3px solid $panelBorder
+    border-radius: 3px
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+
     > h3
-      background: #f0f4f5
+      border-bottom: 1px solid #f4f4f4
+      background: rgba(240, 244, 245, 0.27)
       color: $panelHeaderBck
       padding: 8px 15px
-      box-shadow: 0
+      box-shadow: none
       border-radius: 0
       text-shadow: none
       font-weight: bold
@@ -327,18 +336,25 @@ html
       background: lighten( #ecf0f1, 5% ) !important
 
   form fieldset.inputs
+    // display: none !important
+    // box-shadow: none !important
+    // border-radius: 0 !important
+    // border-radius: 0 !important;
+    // border: 1px solid #d3d8dc
     background: #fff
-    border: 1px solid #d3d8dc
     position: relative
     padding-top: 50px
-    box-shadow: none !important
-    border-radius: 0 !important
+    border-top: 3px solid $panelBorder
+    border-radius: 3px
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1)
     > legend
-      border-bottom: 1px solid #d3d8dc
+      // border-bottom: 1px solid #d3d8dc
+      border-bottom: 1px solid #f4f4f4
       position: absolute
       top: 0
       span
-        background: #f0f4f5
+        // background: #f0f4f5
+        background: #fff
         color: $panelHeaderBck
         border: none
         margin: 0
