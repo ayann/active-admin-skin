@@ -30,6 +30,7 @@ Or install it yourself as:
       ...
 
   You can even change basic colors of the theme by placing some other variables before active-admin-skin imporation:
+      
       ...
       $skinActiveColor: #eda600;
 
