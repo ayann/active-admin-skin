@@ -21,8 +21,17 @@ Or install it yourself as:
     $ gem install active-admin-skin
 
 ## Usage
+  
+  inlcude active-admin-skin css
 
-TODO: Write usage instructions here
+      # active_admin.css.scss
+      ...
+      @import "active-admin-skin";
+      ...
+
+  You can even change basic colors of the theme by placing some other variables before active-admin-skin imporation:
+      ...
+      $skinActiveColor: #eda600;
 
 ## Development
 
