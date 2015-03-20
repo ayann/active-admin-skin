@@ -2,27 +2,27 @@
 $skinTextColor: #1e2a33 !default
 $skinTextActiveColor: #fff !default
 $skinTextTable: #7f8c8d !default
-// $skinActiveColor: #e73c3c !default
-$skinActiveColor: #eda600 !default
+$skinActiveColor: #e73c3c !default
 $skinHeaderBck: #1e2a33 !default
 $panelHeaderBck: #2c3e50 !default
 // $panelBorder: #d2d6de !default
 $panelBorder: #babdc5 !default
+$bodyColor: rgba(236, 240, 241, 0.6) !default
 
 html
-  background: #ecf0f1
+  background: #fff
   font-family: 'Source Sans Pro', sans-serif
-  height: 100%
+  // height: 100%
   min-height: 100%
 
   body.active_admin
-    background: #ecf0f1
+    background: $bodyColor
     background: #fff
     font-family: 'Source Sans Pro', sans-serif
     padding-bottom: 80px
 
   #header
-    background: #ecf0f1
+    background: $bodyColor
     border: none
     text-shadow: none
     // height: 40px
@@ -49,7 +49,7 @@ html
       display: block
       margin-top: 0 !important
 
-    ul.tabs > li 
+    ul.tabs > li
       font-size: 12px
       margin: 0
       min-height: 29px !important
@@ -89,10 +89,13 @@ html
         text-decoration: underline
         &:hover
           text-decoration: none
-      li a
-        &:hover
-          background: none
-          color: $skinTextColor
+      li
+        padding: 0 !important
+        a
+          padding: 6px
+          &:hover
+            background: none
+            color: $skinTextColor
 
   #utility_nav
     li
@@ -113,28 +116,26 @@ html
         padding-bottom: 4px !important
 
   .panel
-    // background: #fff
     // border: 1px solid #d3d8dc
-    // position: relative
-    // box-shadow: none
-    // border-radius: 0
     background: #fff
     position: relative
-    border-top: 3px solid $panelBorder
-    border-radius: 3px
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+    // border-top: 3px solid $panelBorder
+    border-top: 3px solid darken($bodyColor,20)
+    border-radius: 0
+    // box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+    box-shadow: inset 0 1px 3px #ddd
 
     > h3
       border-bottom: 1px solid #f4f4f4
-      background: rgba(240, 244, 245, 0.27)
-      color: $panelHeaderBck
+      background: $panelHeaderBck
+      color: #fff
       padding: 8px 15px
       box-shadow: none
       border-radius: 0
       text-shadow: none
       font-weight: bold
       border-style: none none solid
-  
+
   #title_bar
     background: $skinHeaderBck
     text-shadow: none
@@ -232,11 +233,11 @@ html
     a
       color: $skinActiveColor
       font-weight: bold
-  
+
   .pagination_information
     font-size: 12px
     color: $skinTextTable
-  
+
   .pagination
     margin-top: -2px
     a, span.page.current
@@ -282,7 +283,7 @@ html
       text-shadow: none
       font-weight: bold
     .filter_form_field
-      label 
+      label
         // color: #95a5a6
         color: #000
         font-weight: normal
@@ -316,8 +317,8 @@ html
       padding: 0
 
   form input[type=submit],
-  a.button, 
-  a:link.button, 
+  a.button,
+  a:link.button,
   a:visited.button
     box-shadow: none
     border-radius: 0
@@ -328,8 +329,8 @@ html
     padding: 11px 15px
     &:hover
       background: lighten( $skinActiveColor, 10% ) !important
-  form fieldset.buttons li.cancel a, 
-  form fieldset.actions li.cancel a, 
+  form fieldset.buttons li.cancel a,
+  form fieldset.actions li.cancel a,
   form.filter_form a.clear_filters_btn
     background: #ecf0f1
     box-shadow: none
@@ -395,12 +396,12 @@ html
       margin: 0 auto
       overflow: hidden
 
-  form input[type=text], 
-  form input[type=password], 
-  form input[type=email], 
-  form input[type=number], 
-  form input[type=url], 
-  form input[type=tel], 
+  form input[type=text],
+  form input[type=password],
+  form input[type=email],
+  form input[type=number],
+  form input[type=url],
+  form input[type=tel],
   form textarea
     border-radius: 0
     font-family: 'Source Sans Pro', sans-serif
@@ -408,8 +409,8 @@ html
   form.filter_form .filter_form_field.filter_date_range input[type=text]
     background-position: 100% 4px
 
-  body.logged_in 
-    .flashes 
+  body.logged_in
+    .flashes
       .flash
         position: inherit
         top: 0
@@ -431,12 +432,12 @@ html
         margin-bottom: 0 !important
       textarea
         width: 95%
-  
+
   body.logged_out
     height: 100%
     #footer
       display: none
-    #content_wrapper 
+    #content_wrapper
       margin-top: 150px
       #active_admin_content
         padding-bottom: 0
@@ -463,7 +464,7 @@ html
       top: 0
       left: 0
       right: 0
-      padding: 15px 
+      padding: 15px
       border-bottom: 1px solid #DEDE8B
       text-shadow: none
 
@@ -473,7 +474,7 @@ html
 
   .cke_toolgroup, .cke_combo_button
     border-radius: 0 !important
-  
+
   .cke_top
     background: #f0f4f5 !important
     padding: 8px 15px !important
@@ -491,12 +492,10 @@ html
       display: block
       width: 20%
       float: left
-    
+
     .cke_chrome
       width: 79.7% !important
       overflow: hidden
 
   .cke_toolgroup, .cke_combo_button
     border-radius: 0 !important
-
-
