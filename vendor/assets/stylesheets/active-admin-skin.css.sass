@@ -7,16 +7,16 @@ $skinHeaderBck: #1e2a33 !default
 $panelHeaderBck: #2c3e50 !default
 // $panelBorder: #d2d6de !default
 $panelBorder: #babdc5 !default
-$bodyColor: rgba(236, 240, 241, 0.6) !default
+$bodyColor: rgba(236, 240, 241, 0.48) !default
 
 html
-  background: #fff
+  background: transparent
   font-family: 'Source Sans Pro', sans-serif
   // height: 100%
   min-height: 100%
 
   body.active_admin
-    background: $bodyColor
+    background: $bodyColor !important
     background: #fff
     font-family: 'Source Sans Pro', sans-serif
     padding-bottom: 80px
@@ -123,7 +123,7 @@ html
     border-top: 3px solid darken($bodyColor,20)
     border-radius: 0
     // box-shadow: 0 1px 1px rgba(0,0,0,0.1)
-    box-shadow: inset 0 1px 3px #ddd
+    box-shadow: inset 0 0px 3px #ddd
 
     > h3
       border-bottom: 1px solid #f4f4f4
@@ -263,11 +263,14 @@ html
 
   .sidebar_section.panel
     background: #fff
-    border: 1px solid #d3d8dc
-    box-shadow: none
+    // border: 1px solid #d3d8dc
+    border-top: 3px solid darken($bodyColor,20)
     border-radius: 0
+    box-shadow: inset 0 0px 2px #ddd
+
     form .buttons
-      background: #f1f5f6
+      // background: #f1f5f6
+      background: $panelHeaderBck
       margin: 25px -15px -15px
       padding: 10px 15px
     form fieldset
@@ -350,21 +353,31 @@ html
     background: #fff
     position: relative
     padding-top: 50px
-    border-top: 3px solid $panelBorder
-    border-radius: 3px
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+    // border-top: 3px solid $panelBorder
+    // border-radius: 3px
+    // box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+
+    // border: 1px solid #d3d8dc
+    border-top: 3px solid darken($bodyColor,20)
+    border-radius: 0
+    // box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+    box-shadow: inset 0 0px 3px #ddd
+
     > legend
       // border-bottom: 1px solid #d3d8dc
       border-bottom: 1px solid #f4f4f4
       position: absolute
       top: 0
       span
+        background: $panelHeaderBck
+        color: #fff
+        padding: 8px 15px
+
         // background: #f0f4f5
-        background: #fff
-        color: $panelHeaderBck
+        // background: #fff
+        // color: $panelHeaderBck
         border: none
         margin: 0
-        padding: 8px 15px
         box-shadow: none !important
         border-radius: 0 !important
         text-shadow: none
